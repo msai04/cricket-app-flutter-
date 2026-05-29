@@ -71,6 +71,9 @@ flutter_icons:
 
 # The following section is specific to Flutter packages.
 flutter:
+  uses-material-design: true
+
+  
   assets:
     - assets/images/saia.png
 

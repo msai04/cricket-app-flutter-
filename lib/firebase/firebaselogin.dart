@@ -1,8 +1,8 @@
 // ignore_for_file: unused_local_variable
 
-import 'package:crickinfo/firebase/SignU.dart';
-import 'package:crickinfo/firebase/firebackend.dart';
-import 'package:crickinfo/firebase/forgotass.dart';
+import 'package:crickinfo/firebase/SignUp.dart';
+import 'package:crickinfo/firebase/reusableWidgets.dart';
+import 'package:crickinfo/firebase/forgotPassScreen.dart';
 import 'package:crickinfo/screens/homescreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';

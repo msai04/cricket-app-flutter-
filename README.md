@@ -16,3 +16,11 @@ A live cricket score Flutter application with Firebase authentication and match 
 - Riverpod
 - Firebase
 - REST API
+
+## Screenshots
+
+![HomePage](ScreenShots/HomePage.jpg)
+![Drawer](ScreenShots/Drawer.jpg)
+![LoginScreen](ScreenShots/LogingPage.jpg)
+![FavoritesScreen](ScreenShots/FavoritesScreen.jpg)
+![DetailsScreen](ScreenShots/Details.jpg)

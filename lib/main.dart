@@ -1,5 +1,5 @@
-import 'package:crickinfo/firebase/current.dart';
-import 'package:crickinfo/models/aihandling.dart';
+import 'package:crickinfo/firebase/currentUser.dart';
+import 'package:crickinfo/models/apihandling.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
