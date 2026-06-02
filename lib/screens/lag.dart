@@ -49,17 +49,15 @@ class _cricetState extends State<cricet> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          SizedBox(
+                           matchModel.teamInfo.length > 1 &&
+                                    matchModel.teamInfo[0].img.isNotEmpty
+                                ? SizedBox(
                             height: 50,
                             width: 50,
-                            child: Image.network(
-                              (matchModel.teamInfo.isNotEmpty == true &&
-                                      matchModel.teamInfo[0].img.isNotEmpty ==
-                                          true)
-                                  ? matchModel.teamInfo[0].img
-                                  : '',
-                            ),
-                          ),
+                            child:Image.network(matchModel.teamInfo[0].img)
+                                
+                          )
+                                : Icon(Icons.sports_cricket),
                           Text(
                             (matchModel.teamInfo != null &&
                                     matchModel.teamInfo.length > 1)
@@ -95,17 +93,16 @@ class _cricetState extends State<cricet> {
                               color: Colors.white,
                             ),
                           ),
-                          SizedBox(
+                          matchModel.teamInfo.length > 1 &&
+                                    matchModel.teamInfo[1].img.isNotEmpty
+                                ? SizedBox(
                             height: 50,
                             width: 50,
-                            child: Image.network(
-                              (matchModel.teamInfo.isNotEmpty == true &&
-                                      matchModel.teamInfo[1].img.isNotEmpty ==
-                                          true)
-                                  ? matchModel.teamInfo[1].img
-                                  : '',
-                            ),
-                          ),
+                            child:Image.network(matchModel.teamInfo[1].img)
+                                
+                          )
+                                : Icon(Icons.sports_cricket),
+                          
                         ],
                       ),
 
@@ -127,7 +124,6 @@ class _cricetState extends State<cricet> {
                           ),
                           const Spacer(),
                           Text(
-                            
                             // ignore: unnecessary_null_comparison
                             (matchModel != null && matchModel.score.length >= 2)
                                 ? '${matchModel.score[1].r}/${matchModel.score[1].w} (${matchModel.score[1].o})'
@@ -198,7 +194,7 @@ class _cricetState extends State<cricet> {
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     (matchModel.datetimegmt.isNotEmpty == true)
-                        ? 'DateTime 📅⏰: ${formatted}'
+                        ? 'DateTime 📅⏰: ${formatted}${matchModel.teamInfo.length}'
                         : '-',
                     style: TextStyle(
                       fontSize: 13,
@@ -207,6 +203,7 @@ class _cricetState extends State<cricet> {
                     ),
                     textAlign: TextAlign.center,
                   ),
+                  
                 ),
               ),
               SizedBox(height: 25),

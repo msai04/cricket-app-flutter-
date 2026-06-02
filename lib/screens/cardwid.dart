@@ -48,11 +48,11 @@ class _CicketcardState extends State<Cicketcard> {
                     SizedBox(
                       height: 40,
                       width: 40,
-                      child: Image.network(
-                        (match.teamInfo.isNotEmpty == true&& match.teamInfo[0].img.isNotEmpty==true)
-                            ? match.teamInfo[0].img
-                            : '',
-                      ),
+                      child: match.teamInfo.length>1 &&match.teamInfo[0].img.isNotEmpty
+                      ? Image.network(
+                        match.teamInfo[0].img
+                      )
+                      : Icon(Icons.sports_cricket)
                     ),
                     
                       Text(
@@ -91,11 +91,11 @@ class _CicketcardState extends State<Cicketcard> {
                     SizedBox(
                       height: 40,
                       width: 40,
-                      child: Image.network(
-                        (match.teamInfo.isNotEmpty == true&& match.teamInfo[1].img.isNotEmpty==true)
-                            ? match.teamInfo[1].img
-                            : '',
-                      ),
+                      child: match.teamInfo.length>1 &&match.teamInfo[1].img.isNotEmpty
+                      ? Image.network(
+                        match.teamInfo[1].img
+                      )
+                      : Icon(Icons.sports_cricket),
                     ),
                   ],
                 ),

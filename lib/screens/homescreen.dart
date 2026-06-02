@@ -522,7 +522,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         style: TextStyle(color: Colors.white),
                       ),
                       uiheler.button(() {
-                        loadData();
+                        ref.invalidate(fetchApi);
                       }, 'Retry'),
                     ],
                   ),
